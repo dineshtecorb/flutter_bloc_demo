@@ -1,0 +1,50 @@
+# .cursorrule
+# Project Rules for bloc_demo_poc Flutter App
+# This file defines conventions and rules for project structure, code quality, and team collaboration.
+# All contributors must read and follow these rules.
+# ------------------------------------------------------------------------------
+
+[ENTRY_POINT]
+# The main entry point for the application must be lib/main.dart.
+# All app initialization, dependency injection, and root widget setup must occur here.
+
+[STATE_MANAGEMENT]
+# Use the BLoC pattern for all business logic and state management.
+# All BLoC files should be placed under lib/screens/<feature>/bloc/.
+
+[NAMING_CONVENTIONS]
+# File names must be in snake_case.
+# Class names must be in PascalCase.
+# Widget files must end with _screen.dart, _widget.dart, or _page.dart as appropriate.
+
+[WIDGET_STRUCTURE]
+# Each screen must have its own directory under lib/screens/.
+# Shared widgets should be placed under lib/widgets/.
+
+[ASSET_MANAGEMENT]
+# All images and assets must be placed in the assets/ directory and referenced in pubspec.yaml.
+
+[CODE_QUALITY]
+# All code must pass flutter analyze with no errors or warnings.
+# All public APIs must be documented using Dart doc comments.
+# Use const constructors and final fields wherever possible for performance.
+
+[REVIEW_PROCESS]
+# All pull requests must be reviewed by at least one other team member before merging.
+# All new features must include appropriate tests in the test/ directory.
+
+[CUSTOM_RULES]
+# Custom rules for AI agent (IDE assistant) code contributions in this project.
+# These rules ensure that all code generated or suggested by an AI agent is accurate, maintainable, and concise.
+
+# 1. All AI-generated code must be syntactically correct and pass flutter analyze with no errors or warnings.
+# 2. Code suggestions must follow project structure and naming conventions as defined in this .cursorrule file.
+# 3. All code must be concise—avoid unnecessary boilerplate, redundant comments, or unused imports.
+# 4. Documentation comments must be clear, relevant, and only where needed for public APIs or complex logic.
+# 5. All AI-generated code must use const and final where possible for performance and immutability.
+# 6. Widget and function names must be descriptive and follow Dart/Flutter best practices (PascalCase for classes, camelCase for variables and functions).
+# 7. When suggesting refactors, the agent must explain the rationale in a single, concise comment block above the change.
+# 8. All code must be formatted using dart format before submission or suggestion.
+# 9. If the agent is unsure about a requirement, it must prompt the user for clarification before generating code.
+# 10. AI agent must not generate or suggest code that uses deprecated APIs or anti-patterns. 
+# 11. AI agent must not generate or suggest code that uses any third party packages that are not already in the project.

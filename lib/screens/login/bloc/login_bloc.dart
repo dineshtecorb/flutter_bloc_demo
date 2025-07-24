@@ -5,11 +5,13 @@ import 'package:bloc_demo_poc/screens/login/repo/login_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  LoginBloc() : super(LoginInitailState()) {
+  final LoginRepo loginRepo;
+
+  LoginBloc({required this.loginRepo}) : super(LoginInitailState()) {
     on<LoginReqEvent>((event, emit) async {
       emit(LoginLaodingState());
       try {
-        LoginResModel resModel = await LoginRepo().login(
+        LoginResModel resModel = await loginRepo.login(
             event.loginReqModel?.username ?? 'NA',
             event.loginReqModel?.password ?? '');
         emit(LoginLoadedState(loginResModel: resModel));
